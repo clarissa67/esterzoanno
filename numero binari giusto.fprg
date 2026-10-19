@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="numero binari giusto"/>
+        <attribute name="authors" value="NATALONICLARISSA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-30 08:59:49 "/>
+        <attribute name="created" value="TkFUQUxPTklDTEFSSVNTQTtMQUJBSS1QQzE2OzIwMjYtMDMtMzA7IjA4OjIyOjM1ICI7MzAyMw=="/>
+        <attribute name="edited" value="TkFUQUxPTklDTEFSSVNTQTtMQUJBSS1QQzE2OzIwMjYtMDMtMzA7IjA4OjU5OjQ5ICI7MjszMTQ3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valore, quoziente, divisore, resto, indice" type="Integer" array="False" size=""/>
+            <declare name="bit" type="Integer" array="True" size="4"/>
+            <assign variable="bit[0]" expression="0"/>
+            <assign variable="bit[1]" expression="0"/>
+            <assign variable="bit[2]" expression="0"/>
+            <assign variable="bit[3]" expression="0"/>
+            <output expression="&quot;inserisci un numero che vuoi convertire&quot;" newline="True"/>
+            <input variable="valore"/>
+            <if expression="valore&lt;=15&amp;&amp;valore&gt;=0">
+                <then>
+                    <assign variable="divisore" expression="2"/>
+                    <assign variable="quoziente" expression="valore"/>
+                    <assign variable="indice" expression="3"/>
+                    <while expression="valore!=0">
+                        <assign variable="quoziente" expression="valore/divisore"/>
+                        <assign variable="resto" expression="valore%2"/>
+                        <assign variable="bit[indice]" expression="resto"/>
+                        <assign variable="valore" expression="quoziente"/>
+                        <assign variable="indice" expression="indice-1"/>
+                    </while>
+                    <output expression="bit[0]" newline="True"/>
+                    <output expression="bit[1]" newline="True"/>
+                    <output expression="bit[2]" newline="True"/>
+                    <output expression="bit[3]" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;valore fuori dal range&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

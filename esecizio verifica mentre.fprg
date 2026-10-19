@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="esecizio verifica mentre"/>
+        <attribute name="authors" value="NATALONICLARISSA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-04-27 08:27:17 "/>
+        <attribute name="created" value="TkFUQUxPTklDTEFSSVNTQTtMQUJBSS1QQzE2OzIwMjYtMDQtMjc7IjA4OjEzOjIyICI7MzAyNg=="/>
+        <attribute name="edited" value="TkFUQUxPTklDTEFSSVNTQTtMQUJBSS1QQzE2OzIwMjYtMDQtMjc7IjA4OjI3OjE3ICI7MTszMTQz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="velocit&#224;, somma, Vmedia" type="Real" array="False" size=""/>
+            <declare name="contatore" type="Integer" array="False" size=""/>
+            <output expression="&quot;inserisci il valore della velocit&#224;&quot;" newline="True"/>
+            <input variable="velocit&#224;"/>
+            <assign variable="somma" expression="0"/>
+            <assign variable="contatore" expression="0"/>
+            <while expression="velocit&#224;!=-1">
+                <output expression="&quot;inserisci il valore della velocit&#224;&quot;" newline="True"/>
+                <input variable="velocit&#224;"/>
+                <assign variable="somma" expression="somma+velocit&#224;"/>
+                <assign variable="contatore" expression="contatore+1"/>
+            </while>
+            <assign variable="Vmedia" expression="somma/contatore"/>
+            <output expression="Vmedia" newline="True"/>
+            <if expression="Vmedia&gt;=15&amp;&amp;Vmedia&lt;=20">
+                <then>
+                    <output expression="&quot;la velocit&#224; &#232; nella norma&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;la velocit&#224; &#232; anomala&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
